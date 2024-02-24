@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.header-container_flex {
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container_flex img {
+    min-width: 200px;
+    min-height: 200px;
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+    top: -10%;
+    left: 6%;
+}
+
+.header-container_flex-titulos {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-container_flex-titulos h1{
+    color: var(--acent);
+    font-size: 8vw;
+    text-decoration: underline;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin: 0 10vw auto auto;
+}
+
+.header-container_flex-titulos h3 {
+    width: 90%;
+    margin: 0;
+    text-align: right;
+    color: var(--dark-color);
+    font-size: 8vw;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.your {
+    display: inline;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--dark-color);
+}
+
+.expenses {
+    display: inline;
+    background-image: linear-gradient(to right, var(--acent), #91632c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.header-buttons button {
+    width: 21vw;
+    position: relative;
+    background: var(--acent);
+    border: none;
+    padding: 1.5vh 0;
+    border-radius: 5px;
+    font-size: 3vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header-buttons button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 4px;
+    bottom: -5px;
+    right: 5px;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    z-index: -1;
+}
