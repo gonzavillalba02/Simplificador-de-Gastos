@@ -1,13 +1,38 @@
 .results {
-    border-radius: 10px;
-    border: 3px solid var(--principal);
     margin: 10vh 7vw;
+    padding: 1vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.results-border {
+    border-radius: 10px;
+    border: 3px solid var(--principal);
+}
+
 .NoInfo {
     margin: 2.5vh 0 3vh 0;
     width: 9vh;
+}
+
+.parrafo-result {
+    color: var(--dark-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: flex-start;
+    margin: 2vh 0;
+    font-size: 2.5vh;
+}
+
+.parrafo-result-cant {
+    color: #ff0000;
+    margin: 0 1vw;
+}
+
+.parrafo-result-deudor {
+    margin: 0 1vw;
+    text-decoration: underline;
 }

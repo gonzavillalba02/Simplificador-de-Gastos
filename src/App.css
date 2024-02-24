@@ -1,6 +1,5 @@
 .App {
     background: var(--dark-background);
     width: 100vw;
-    height: 1000vh;
     overflow-y: hidden;
 }

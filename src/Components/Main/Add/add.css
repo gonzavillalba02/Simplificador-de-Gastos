@@ -11,12 +11,27 @@
     animation: desplegarse 1s ease-in-out forwards;
 }
 
+.add-plegado {
+    height: 45vh;
+    animation: plegarse .6s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
 @keyframes desplegarse {
     from {
         height: 70px;
     }
     to {
         height: 45vh;
+    }
+}
+
+@keyframes plegarse {
+    from {
+        height: 45vh;
+    }
+    to {
+        height: 70px;
     }
 }
 
@@ -31,26 +46,49 @@
 .add-header h5 {
     margin: 0 0 0 4vw;
     color: var(--dark-color);
-    text-decoration: underline;
-    font-weight: 600;
-    font-style: italic;
+    font-weight: 200;
     font-size: 4vh;
 }
 
 .add-header button {
     position: relative;
     color: var(--dark-color);
-    font-size: 3vh;
-    width: 5vh;
-    height: 5vh;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     border: none;
     background: var(--principal);
     text-align: center;
     margin: 0 4vw 0 0;
     cursor: pointer;
+    color: #fff;
 }
 
+.add-header-button-p {
+    margin: 0;
+    margin-top: .5vh;
+    font-size: 2.2vh;
+}
+
+.minus {
+    animation: rotar1 .5s ease-out;
+}
+
+.plus {
+    animation: rotar2 .9s ease-out;
+}
+
+@keyframes rotar1 {
+    from {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rotar2 {
+    from {
+        transform: rotate(-270deg);
+    }
+}
 
 .add-form {
     display: flex;
@@ -59,7 +97,8 @@
 }
 
 .hidden {
-    display: none;
+    height: 0;
+    animation: desaparecer .5s linear forwards;
 }
 
 .view {
@@ -75,13 +114,24 @@
 
     to {
         opacity: 1;
+        display: none;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
 .add-form label {
     margin: 2vh 0 1vh 0;
     color: var(--dark-color);
-    font-weight: 500;
+    font-weight: 300;
     font-size: 3vh;
 }
 
@@ -101,7 +151,22 @@
 
 .add-form input::placeholder{
     font-style: italic;
+    font-size: 2.3vh;
     letter-spacing: .5px;
+}
+
+.add-from-msj-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-from-msj-button p {
+    color: #ff0000;
+}
+
+.msj-hidden {
+    visibility: hidden;
 }
 
 .add-form button {

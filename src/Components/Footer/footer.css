@@ -1,0 +1,17 @@
+footer {
+    width: 100%;
+    background: linear-gradient(to top, var(--principal), var(--acent));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+footer img {
+    width: 8vh;
+}
+
+footer p {
+    font-weight: 400;
+    text-decoration: underline;
+}

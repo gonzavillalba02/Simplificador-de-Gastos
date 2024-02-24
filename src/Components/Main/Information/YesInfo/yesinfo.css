@@ -1,0 +1,30 @@
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1vh 4vw;
+    border: 3px solid var(--secondary);
+    border-radius: 10px;
+    margin: 2vh 3vw;
+    color: #fff;
+}
+
+.info-container-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.trash {
+    color: var(--acent);
+    cursor: pointer;
+}
+
+.info-container p {
+    margin: 1vh 0;
+    font-size: 3vh;
+    text-align: left;
+}
