@@ -231,4 +231,10 @@
         cursor: pointer;
         color: #000;
     }
+
+    .arrow {
+        top: 78vh;
+        left: 74.5vw;
+    }
+    
 }
