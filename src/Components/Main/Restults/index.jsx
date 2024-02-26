@@ -12,7 +12,7 @@ const Results = ({ objDeudas, ligth }) => {
     }
     
     return (
-        <article id="results" className={"results " + (!(Object.keys(objDeudas).length === 0) && "results-border")}>
+        <article className={"results " + (!(Object.keys(objDeudas).length === 0) && "results-border")}>
             {Object.keys(objDeudas).length === 0 ? (
                 <></>
             ) : (
@@ -32,6 +32,7 @@ const Results = ({ objDeudas, ligth }) => {
                     return deudasJSX;
                 })
             )}
+            <div id="results"></div>
         </article>
     );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './information.css';
 import NoInfo from "./NoInfo";
 import YesInfo from "./YesInfo";
@@ -82,12 +82,29 @@ const Information = ({data, info, removeFromData, setObjDeudas, ligth}) => {
         }
     }
 
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+          if (event.shiftKey && event.key === 'Enter') {
+            calcular(data);
+            handleScrollToResults();
+          }
+        };
+        document.addEventListener('keydown', handleKeyPress);
+    
+        return () => {
+          document.removeEventListener('keydown', handleKeyPress);
+        };
+      }, []); 
+
     return (
         <article className="information">
             {(info && data.length > 0) ?
-            <>{data.map((obj) => {
-                return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData} ligth={ligth}/>
-            })}
+            <>
+            <div className="info-divs">
+                {data.map((obj) => {
+                    return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData} ligth={ligth}/>
+                })}
+            </div>
             <div className="information-container-buttons">
                 <button className="information-button" onClick={() => {setObjDeudas(calcular(data)); handleScrollToResults();}}>
                     Results

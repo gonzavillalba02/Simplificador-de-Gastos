@@ -2,7 +2,12 @@
     margin: 10vh 7vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
     z-index: 10;
+}
+
+.info-divs {
+    width: 100%;
 }
 
 .information-container-buttons {
@@ -40,4 +45,17 @@
 .information-button-a {
     color: #000;
     text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+
+    .information {
+        width: 90vw;
+        margin: 10vh auto;
+    }
+
+    .info-divs {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import './add.css';
 
@@ -15,6 +15,8 @@ const Add = ({data, pushData, info, setInfo, ligth}) => {
 
     const [used, setUsed] = useState(false);
 
+    const inputRef = useRef(null);
+
     return (
         <article className={"add" + " " + (add ? "add-desplegado" : "add-plegado")}>
             <div className={"add-header " + (ligth && "add-header-li")}>
@@ -29,7 +31,7 @@ const Add = ({data, pushData, info, setInfo, ligth}) => {
             </div>
             <form className={"add-form " + (add ? "view " : "hidden ") + (ligth && "add-form-li")}>
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" placeholder="Enter name" value={name} 
+                <input type="text" name="name" placeholder="Enter name" value={name} ref={inputRef}
                 onChange={(e) => {
                     setUsed(false);
                     setName(e.target.value);
@@ -72,6 +74,7 @@ const Add = ({data, pushData, info, setInfo, ligth}) => {
                                     setUsed(true);
                                 }
                             }
+                            inputRef.current.focus();
                         }}>
                         Add
                     </button>

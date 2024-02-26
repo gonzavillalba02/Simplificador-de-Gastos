@@ -194,3 +194,11 @@
     cursor: pointer;
     color: #000;
 }
+
+@media screen and (min-width: 600px) {
+    .add {
+        margin: 10vh auto;
+        min-width: 500px;
+        max-width: 64vw;
+    }
+}

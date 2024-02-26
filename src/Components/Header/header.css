@@ -5,10 +5,12 @@
     justify-content: space-between;
     height: 60vh;
     animation: volver .8s ease-in-out forwards;
+    overflow: hidden;
 }
 
 .header-info {
     animation: moverse .8s ease-in-out forwards;
+    overflow: hidden;
 }
 
 @keyframes moverse {
@@ -39,7 +41,7 @@
 
 .header-container_flex img {
     min-width: 190px;
-    max-width: 250px;
+    max-width: 200px;
     width: 40vw;
     position: relative;
     top: -2%;
@@ -48,6 +50,7 @@
 
 .header-container_flex-titulos {
     width: 50%;
+    max-width: 300px;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -56,7 +59,7 @@
 
 .header-container_flex-titulos h1{
     color: var(--acent);
-    font-size: 8vw;
+    font-size: 6vh;
     text-decoration: underline;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
@@ -179,5 +182,51 @@
     100% {
         opacity: 0;
         transform: translateY(-1.5vh);
+    }
+}
+
+@media screen and (min-width: 600px) /* and (max-width: 1028px) */{
+
+    .header {
+        margin-top: 10vh;
+    }
+
+    .header-container_flex {
+        justify-content: center;
+        margin-bottom: 4vh;
+    }
+
+    .header-container_flex-titulos {
+        max-width: 1000px;
+    }
+
+    .header-container_flex img {
+        max-width: 250px;
+        margin:0 7vh 0 15vh;
+    }
+
+    .header-container_flex-titulos h1 {
+        left: 13vw;
+    }
+
+    .header-container_flex-titulos h3 {
+        max-width: 500px;
+        font-size: 6vh;
+        margin-left: 8vh;
+    }
+
+    .header-buttons button {
+        width: 21vw;
+        max-width: 180px;
+        position: relative;
+        background: var(--acent);
+        border: none;
+        padding: 1.5vh 0;
+        border-radius: 5px;
+        font-size: 2.3vh;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        color: #000;
     }
 }
