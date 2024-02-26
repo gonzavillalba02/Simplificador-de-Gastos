@@ -188,7 +188,8 @@
 @media screen and (min-width: 600px) /* and (max-width: 1028px) */{
 
     .header {
-        margin-top: 10vh;
+        margin-top: 8vh;
+        height: 70vh;
     }
 
     .header-container_flex {
