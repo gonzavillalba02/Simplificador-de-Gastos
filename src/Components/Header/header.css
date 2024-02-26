@@ -15,8 +15,8 @@
 }
 
 .header-container_flex img {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 190px;
+    max-width: 250px;
     width: 40vw;
     position: relative;
     top: -2%;
@@ -44,7 +44,7 @@
 
 .header-container_flex-titulos h3 {
     width: 90%;
-    margin: 0 0 0 6vh;
+    margin: 0 0 0 5vh;
     text-align: left;
     color: var(--dark-color);
     font-size: 8vw;
