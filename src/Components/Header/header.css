@@ -152,7 +152,7 @@
     color: var(--principal);
     rotate: 180deg;
     position: absolute;
-    top: 61%;
+    top: 61vh;
     left: 77.5vw;
     font-size: 6vh;
     opacity: 0;

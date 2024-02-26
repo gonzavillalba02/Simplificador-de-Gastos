@@ -57,6 +57,7 @@
 }
 
 .info-header-container button {
+    color: #000;
     border: none;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
