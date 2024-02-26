@@ -85,7 +85,7 @@ const Information = ({data, info, removeFromData, setObjDeudas, ligth}) => {
     useEffect(() => {
         const handleKeyPress = (event) => {
           if (event.shiftKey && event.key === 'Enter') {
-            calcular(data);
+            setObjDeudas(calcular(data));
             handleScrollToResults();
           }
         };
