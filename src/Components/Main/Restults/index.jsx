@@ -12,7 +12,7 @@ const Results = ({ objDeudas, ligth }) => {
     }
     
     return (
-        <article className={"results " + (!(Object.keys(objDeudas).length === 0) && "results-border")}>
+        <article id="results" className={"results " + (!(Object.keys(objDeudas).length === 0) && "results-border")}>
             {Object.keys(objDeudas).length === 0 ? (
                 <></>
             ) : (

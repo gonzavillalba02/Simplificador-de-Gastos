@@ -75,6 +75,13 @@ const Information = ({data, info, removeFromData, setObjDeudas, ligth}) => {
         return calcularDeudas(pagos, personas, totalPagado);
     }
 
+    const handleScrollToResults = () => {
+        const resultsElement = document.getElementById('results');
+        if (resultsElement) {
+            resultsElement.scrollIntoView({behavior: 'smooth'});
+        }
+    }
+
     return (
         <article className="information">
             {(info && data.length > 0) ?
@@ -82,7 +89,7 @@ const Information = ({data, info, removeFromData, setObjDeudas, ligth}) => {
                 return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData} ligth={ligth}/>
             })}
             <div className="information-container-buttons">
-                <button className="information-button" onClick={() => setObjDeudas(calcular(data))}>
+                <button className="information-button" onClick={() => {setObjDeudas(calcular(data)); handleScrollToResults();}}>
                     Results
                 </button>
             </div>
