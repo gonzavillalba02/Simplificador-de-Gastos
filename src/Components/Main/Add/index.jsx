@@ -73,7 +73,7 @@ const Add = ({data, pushData, info, setInfo}) => {
                                 }
                             }
                         }}>
-                        Accept
+                        Add
                     </button>
                 </div>
             </form>

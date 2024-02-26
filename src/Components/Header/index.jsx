@@ -6,11 +6,11 @@ const Header = () => {
     return(
         <header className="header">
             <div className="header-container_flex">
-                <img src={Icono} alt="Icono" />
                 <div className="header-container_flex-titulos">
                     <h1>Splitify</h1>
                     <h3>DO <p className="your">YOUR</p> <p className="expenses">EXPENSES</p> WELL</h3>
                 </div>
+                <img src={Icono} alt="Icono" />
             </div>
             <div className="header-buttons">
                 <button>

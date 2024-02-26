@@ -8,7 +8,8 @@
 }
 
 .add-desplegado {
-    animation: desplegarse 1s ease-in-out forwards;
+    max-height: fit-content;
+    animation: desplegarse 1.5s ease-in-out forwards;
 }
 
 .add-plegado {
@@ -19,16 +20,16 @@
 
 @keyframes desplegarse {
     from {
-        height: 70px;
+        max-height: 70px;
     }
     to {
-        height: 45vh;
+        max-height: 1000px;
     }
 }
 
 @keyframes plegarse {
     from {
-        height: 45vh;
+        height: calc(fit-content);
     }
     to {
         height: 70px;
@@ -98,13 +99,13 @@
 
 .hidden {
     height: 0;
-    animation: desaparecer .5s linear forwards;
+    animation: desaparecer .4s linear forwards;
 }
 
 .view {
     opacity: 0;
     animation: aparecer 1s forwards;
-    animation-delay: .8s;
+    animation-delay: .5s;
 }
 
 @keyframes aparecer {

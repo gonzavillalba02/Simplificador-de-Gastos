@@ -1,5 +1,5 @@
 import React from "react";
-import Icono from '../../assets/icon.png';
+import Icono from '../../assets/Icono.png';
 import './footer.css';
 
 const Footer = () => {

@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1vh 4vw;
-    border: 3px solid var(--secondary);
+    background: #3D3D3D;
     border-radius: 10px;
     margin: 2vh 3vw;
     color: #fff;

@@ -82,7 +82,7 @@ const Information = ({data, info, removeFromData, setObjDeudas}) => {
                 return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData}/>
             })}
             <button className="information-button" onClick={() => setObjDeudas(calcular(data))}>
-                Restults
+                Results
             </button>
             </>
             : 

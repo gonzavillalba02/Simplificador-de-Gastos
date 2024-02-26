@@ -18,10 +18,9 @@
     min-width: 200px;
     min-height: 200px;
     width: 40vw;
-    height: 40vw;
     position: relative;
-    top: -10%;
-    left: 6%;
+    top: -2%;
+    left: -2.5%;
 }
 
 .header-container_flex-titulos {
@@ -40,13 +39,13 @@
     font-weight: 700;
     font-style: italic;
     letter-spacing: 2px;
-    margin: 0 10vw auto auto;
+    margin: 0 10vw 10vh auto;
 }
 
 .header-container_flex-titulos h3 {
     width: 90%;
-    margin: 0;
-    text-align: right;
+    margin: 0 0 0 6vh;
+    text-align: left;
     color: var(--dark-color);
     font-size: 8vw;
     font-style: italic;
