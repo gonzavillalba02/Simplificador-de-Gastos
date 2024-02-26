@@ -1,9 +1,16 @@
 import React from "react";
 import './results.css';
-import plata from '../../../assets/pesos.png';
 
-const Results = ({ objDeudas }) => {
+const Results = ({ objDeudas, ligth }) => {
 
+    const formatNumber = (num) => {
+        if (num % 1 != 0) {
+            return num.toFixed(2);
+        } else {
+            return num;
+        }
+    }
+    
     return (
         <article className={"results " + (!(Object.keys(objDeudas).length === 0) && "results-border")}>
             {Object.keys(objDeudas).length === 0 ? (
@@ -17,8 +24,8 @@ const Results = ({ objDeudas }) => {
                     const cantidades = Object.values(deudas); // array con cuando le debe
 
                     const deudasJSX = aQuien.map((deudor, index) => (
-                        <p className="parrafo-result" key={index}>
-                            {name} debe <p className="parrafo-result-cant">${cantidades[index].toFixed(2)}</p> a <p className="parrafo-result-deudor">{deudor}</p>
+                        <p className={"parrafo-result " + (ligth && "parrafo-result-li")} key={index}>
+                            {name} owes <p className="parrafo-result-deudor">{deudor}</p> <p className={"parrafo-result-cant " + (ligth && "parrafo-result-cant-li")}>${formatNumber(cantidades[index])}</p>
                         </p>
                     ));
 

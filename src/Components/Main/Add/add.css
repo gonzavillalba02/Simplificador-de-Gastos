@@ -51,9 +51,12 @@
     font-size: 4vh;
 }
 
+.add-header-li h5 {
+    color: var(--ligth-color);
+}
+
 .add-header button {
     position: relative;
-    color: var(--dark-color);
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -136,6 +139,10 @@
     font-size: 3vh;
 }
 
+.add-form-li label {
+    color: var(--ligth-color);
+}
+
 .add-form input {
     margin: 0 0 2vh 0;
     background: none;
@@ -144,6 +151,10 @@
     color: var(--dark-color);
     padding: 1vh 0;
     font-size: 2.5vh;
+}
+
+.add-form-li input {
+    color: var(--ligth-color);
 }
 
 .add-form input:focus {

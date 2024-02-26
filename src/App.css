@@ -3,3 +3,7 @@
     width: 100vw;
     overflow-y: hidden;
 }
+
+.App-li {
+    background: var(--ligth-background);
+}

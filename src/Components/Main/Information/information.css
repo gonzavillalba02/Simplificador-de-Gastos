@@ -2,6 +2,12 @@
     margin: 10vh 7vw;
     display: flex;
     flex-direction: column;
+    z-index: 10;
+}
+
+.information-container-buttons {
+    margin: 2vh 5% 2vh auto;
+    z-index: 10;
 }
 
 .information-button {
@@ -13,7 +19,20 @@
     font-family: "Roboto", sans-serif;
     font-size: 2vh;
     font-weight: 500;
-    margin: 2vh 5% 2vh auto;
     cursor: pointer;
     color: #000;
+    position: relative;
+}
+
+.information-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 4px;
+    left: 3px;
+    bottom: -5px;
+    right: 5px;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    z-index: -1;
 }

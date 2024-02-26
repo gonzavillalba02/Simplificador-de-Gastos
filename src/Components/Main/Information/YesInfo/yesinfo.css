@@ -10,6 +10,10 @@
     color: #fff;
 }
 
+.info-container-li {
+    background: #c5c5c5;
+}
+
 .info-container-div {
     display: flex;
     flex-direction: row;
@@ -23,8 +27,16 @@
     cursor: pointer;
 }
 
+.trash-li {
+    color: var(--principal);
+}
+
 .info-container p {
     margin: 1vh 0;
     font-size: 3vh;
     text-align: left;
+}
+
+.info-container-li p {
+    color: var(--light-color);
 }

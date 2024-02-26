@@ -27,9 +27,17 @@
     font-size: 2.5vh;
 }
 
+.parrafo-result-li {
+    color: var(--ligth-color);
+}
+
 .parrafo-result-cant {
     color: var(--acent);
     margin: 0 1vw;
+}
+
+.parrafo-result-cant-li {
+    color: var(--principal);
 }
 
 .parrafo-result-deudor {

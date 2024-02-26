@@ -5,7 +5,7 @@ import Add from "./Add";
 import Information from "./Information";
 import Results from "./Restults";
 
-const Main = () => {
+const Main = ({ligth}) => {
 
     const [data, setData] = useState([]);
 
@@ -32,9 +32,9 @@ const Main = () => {
 
     return(
         <main className="main">
-            <Add data={data} pushData={pushData} setInfo={setInfo} />
-            <Information data={data} info={info} setInfo={setInfo} removeFromData={removeFromData} setObjDeudas={setObjDeudas} />
-            <Results objDeudas={objDeudas} />
+            <Add data={data} pushData={pushData} setInfo={setInfo} ligth={ligth} />
+            <Information data={data} info={info} setInfo={setInfo} removeFromData={removeFromData} setObjDeudas={setObjDeudas} ligth={ligth} />
+            <Results objDeudas={objDeudas} ligth={ligth}/>
         </main>
     )
 }

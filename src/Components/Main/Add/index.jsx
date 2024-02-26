@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TiMinus, TiPlus } from "react-icons/ti";
 import './add.css';
 
-const Add = ({data, pushData, info, setInfo}) => {
+const Add = ({data, pushData, info, setInfo, ligth}) => {
 
     const [add, setAdd] = useState(false);
 
@@ -17,7 +17,7 @@ const Add = ({data, pushData, info, setInfo}) => {
 
     return (
         <article className={"add" + " " + (add ? "add-desplegado" : "add-plegado")}>
-            <div className="add-header">
+            <div className={"add-header " + (ligth && "add-header-li")}>
                 <h5>Add Friends</h5>
                 <button className={add ? "minus" : "plus"}
                 onClick={() => {
@@ -27,7 +27,7 @@ const Add = ({data, pushData, info, setInfo}) => {
                     <p className="add-header-button-p">{add ?  <TiMinus /> : <TiPlus />}</p>
                 </button>
             </div>
-            <form className={"add-form" + " " + (add ? "view" : "hidden")}>
+            <form className={"add-form " + (add ? "view " : "hidden ") + (ligth && "add-form-li")}>
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" placeholder="Enter name" value={name} 
                 onChange={(e) => {

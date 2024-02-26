@@ -11,9 +11,9 @@ code {
 
 :root {
   --dark-background: #232323;
-  --ligth-background: #fff;
+  --ligth-background: #f0f0f0;
   --dark-color: #fff;
-  --light-color: #000;
+  --light-color: #252525;
   --principal: #ae8231;
   --secondary: #dace77;
   --acent: #ffc53d;

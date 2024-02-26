@@ -16,3 +16,7 @@
     font-size: 3vh;
     color: var(--dark-color);
 }
+
+.Noinfo-li p {
+    color: var(--light-color);
+}

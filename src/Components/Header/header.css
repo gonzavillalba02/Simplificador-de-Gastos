@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     flex-direction: column;
@@ -42,6 +43,10 @@
     margin: 0 10vw 10vh auto;
 }
 
+.header-container_flex-titulos-li h1 {
+    color: var(--principal);
+}
+
 .header-container_flex-titulos h3 {
     width: 90%;
     margin: 0 0 0 5vh;
@@ -52,11 +57,19 @@
     letter-spacing: 1px;
 }
 
+.header-container_flex-titulos-li h3 {
+    color: var(--light-color);
+}
+
 .your {
     display: inline;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--dark-color);
+}
+
+.your-li {
+    -webkit-text-stroke-color: #000;
 }
 
 .expenses {
@@ -70,8 +83,15 @@
 .header-buttons {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     z-index: 10;
+}
+
+.colorToggle {
+    font-size: 2.5vh;
+    color: var(--principal);
+    cursor: pointer;
 }
 
 .header-buttons button {

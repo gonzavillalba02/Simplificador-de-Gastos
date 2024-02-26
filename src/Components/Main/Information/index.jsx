@@ -3,7 +3,7 @@ import './information.css';
 import NoInfo from "./NoInfo";
 import YesInfo from "./YesInfo";
 
-const Information = ({data, info, removeFromData, setObjDeudas}) => {
+const Information = ({data, info, removeFromData, setObjDeudas, ligth}) => {
 
     const calcular = (data) => {
 
@@ -79,14 +79,16 @@ const Information = ({data, info, removeFromData, setObjDeudas}) => {
         <article className="information">
             {(info && data.length > 0) ?
             <>{data.map((obj) => {
-                return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData}/>
+                return <YesInfo key={obj.id} id={obj.id} name={obj.name} amount={obj.amount} removeFromData={removeFromData} ligth={ligth}/>
             })}
-            <button className="information-button" onClick={() => setObjDeudas(calcular(data))}>
-                Results
-            </button>
+            <div className="information-container-buttons">
+                <button className="information-button" onClick={() => setObjDeudas(calcular(data))}>
+                    Results
+                </button>
+            </div>
             </>
             : 
-            <NoInfo />}
+            <NoInfo ligth={ligth} />}
         </article>
     )
 }
