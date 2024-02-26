@@ -84,6 +84,7 @@
     font-size: 8vw;
     font-style: italic;
     letter-spacing: 1px;
+    text-wrap: balance;
 }
 
 .header-container_flex-titulos-li h3 {
